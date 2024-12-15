@@ -2,6 +2,7 @@ package model;
 
 import strategies.WinningStrategy;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
@@ -12,6 +13,16 @@ public class Game {
     private List<Move> moves;
     private List<WinningStrategy> winningStrategies;
     private Player winner;
+
+    public Game(Integer size, List<Player> players, List<WinningStrategy> winningStrategies) {
+        board = new Board(size);
+        this.currentPlayerIndex = 0;
+        this.gameState = GameState.IN_PROGRESS;
+        this.moves = new ArrayList<>();
+        this.winner = null;
+        this.winningStrategies = winningStrategies;
+        this.players = players;
+    }
 
     public Board getBoard() {
         return board;
