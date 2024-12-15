@@ -31,7 +31,7 @@ public class GameController {
     - List of winning strategies
      */
     public GameState getGameState(Game game){
-        return null;
+        return GameState.IN_PROGRESS;
     }
 
     public void makeMove(Game game){
@@ -47,6 +47,6 @@ public class GameController {
     }
 
     public void display(Game game){
-
+        game.displayBoard();
     }
 }

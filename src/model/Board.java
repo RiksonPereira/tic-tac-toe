@@ -33,4 +33,14 @@ public class Board {
     public void setSize(int size) {
         this.size = size;
     }
+
+    public void display(){
+        for (List<Cell> row : grid){
+            System.out.print("|");
+            for (Cell cell : row){
+                cell.displayCell();
+            }
+            System.out.println("|");
+        }
+    }
 }

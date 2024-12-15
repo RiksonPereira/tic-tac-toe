@@ -31,9 +31,13 @@ public class Client {
         - update turn
         - continue
          */
+
+        // checking the display method
+        gameController.display(game);
+
         while (gameController.getGameState(game).equals(GameState.IN_PROGRESS)){
-            gameController.display(game);
-            gameController.makeMove(game);
+//            gameController.display(game);
+//            gameController.makeMove(game);
 
             if(gameController.getGameState(game).equals(GameState.GAME_OVER)){
                 System.out.println("Winner: "+ gameController.getWinner(game));
