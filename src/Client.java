@@ -10,8 +10,8 @@ public class Client {
         GameController gameController = new GameController();
 
         List<Player> players = new ArrayList<>();
-        players.add(new HumanPlayer());
-        players.add(new Bot());
+        players.add(new HumanPlayer(1, "Rikson", PlayerType.HUMAN_PLAYER, new Symbol('X')));
+        players.add(new Bot(2,"Bot",PlayerType.BOT, new Symbol('O'), BotDifficultyLevel.EASY));
 
         int size = 3;
 
